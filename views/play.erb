@@ -1,6 +1,26 @@
-<div>
-<%= @player_1 %>
-</div>
-<div>
-<%= @player_2 %> --- HP: 30
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <h1><%= @player_1 %> and <%= @player_2 %>, prepare for battle!</h1>
+  <div>
+    <%= @player_1 %>
+  </div>
+  <div>
+    <%= @player_2 %> --- HP: 30
+  </div>
+  <form action="/attack-conf" method="post">
+    <div class="button">
+      <input type="submit" value="attack">
+    </div>
+  </form>
+</body>
+</html>
+
+
+
+<!-- create button to attack -->
+
+

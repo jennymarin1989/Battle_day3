@@ -24,6 +24,12 @@ class Battle < Sinatra::Base
     erb :play
   end
 
+  post '/attack-conf' do 
+    @player_1 = session[:session_1]
+    @player_2 = session[:session_2]
+    erb :attack_confirm
+  end
+
   run! if app_file == $0
 
 end
