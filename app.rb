@@ -32,6 +32,9 @@ class Battle < Sinatra::Base
   post '/attack-conf' do 
     $game.attack($game.player_2)
     erb :attack_confirm
+    # calling $game.switch_turns might not work here because loading the html file *MAYBE* has to be the 
+    # last action. If this is the case, we can redirect to get '/new-turn' and then, the first thing we do
+    # is call $game.switch_turns
   end
 
   run! if app_file == $0
