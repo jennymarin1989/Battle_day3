@@ -4,12 +4,12 @@
   <title></title>
 </head>
 <body>
-  <h1><%= @player_1 %> and <%= @player_2 %>, prepare for battle!</h1>
+  <h1><%= $player_1.name %> and <%= $player_2.name %>, prepare for battle!</h1>
   <div>
-    <%= @player_1 %>
+    <%= $player_1.name %>
   </div>
   <div>
-    <%= @player_2 %> --- HP: 30
+    <%= $player_2.name %> --- HP: 30
   </div>
   <form action="/attack-conf" method="post">
     <div class="button">
@@ -19,8 +19,5 @@
 </body>
 </html>
 
-
-
-<!-- create button to attack -->
 
 
