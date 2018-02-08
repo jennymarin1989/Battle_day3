@@ -31,8 +31,7 @@ class Battle < Sinatra::Base
   end
 
   post '/attack-conf' do 
-    # @player_1 = session[:session_1]
-    # @player_2 = session[:session_2]
+    $player_1.attack($player_2)
     erb :attack_confirm
   end
 
