@@ -12,8 +12,7 @@ class Battle < Sinatra::Base
   end
 
   post '/names' do
-    $player_1 = Player.new(params[:name_1])
-    $player_2 = Player.new(params[:name_2])
+    $game = Game.new(params[:name_1], params[:name_2])
     # la global variable $ se puede asignar directamente sin
     #pasar por instance variable @
     # $player_1 = @player_1
@@ -31,7 +30,7 @@ class Battle < Sinatra::Base
   end
 
   post '/attack-conf' do 
-    $player_1.attack($player_2)
+    $game.attack($game.player_2)
     erb :attack_confirm
   end
 

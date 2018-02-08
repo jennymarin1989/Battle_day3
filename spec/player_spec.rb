@@ -18,10 +18,4 @@ describe Player do
     expect{player_1.reduce_hit_points}.to change{player_1.hit_points}.by(-10)
     end
   end
-
-  context "#attack" do 
-    it "reduces p2's hit points by 10" do 
-      expect { player_1.attack(player_2)}.to change {player_2.hit_points}.by(-10)
-    end
-  end
 end

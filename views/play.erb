@@ -4,12 +4,12 @@
   <title></title>
 </head>
 <body>
-  <h1><%= $player_1.name %> and <%= $player_2.name %>, prepare for battle!</h1>
+  <h1><%= $game.player_1.name %> and <%= $game.player_2.name %>, prepare for battle!</h1>
   <div>
-    <%= $player_1.name %>
+    <%= $game.player_1.name %>
   </div>
   <div>
-    <%= $player_2.name %> --- HP: 30
+    <%= $game.player_2.name %> --- HP: <%= $game.player_2.hit_points %>
   </div>
   <form action="/attack-conf" method="post">
     <div class="button">
