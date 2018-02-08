@@ -14,6 +14,5 @@ RSpec.feature "player names", :type => :feature do
     fill_in "name_2", with: "Jenny"
     click_button "PREEEPPPPARREEE FOR BATTTLLLEEE"
     expect(page).to have_content "Marcus\nJenny"
-
   end
 end
