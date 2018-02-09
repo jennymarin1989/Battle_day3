@@ -6,10 +6,10 @@ require 'spec_helper' #Fails if rspec/helper
 #     expect(page).to have_text("Checking if is working")
 #   end
 # end
-
-RSpec.feature "player names", :type => :feature do
-  scenario "Enter player names" do
-    sign_in_and_play
-    expect(page).to have_content "Marcus\nJenny"
-  end
-end
+#
+# RSpec.feature "player names", :type => :feature do
+#   scenario "Enter player names" do
+#     sign_in_and_play
+#     expect(page).to have_content "Marcus\nJenny"
+#   end
+# end

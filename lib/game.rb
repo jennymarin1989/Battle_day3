@@ -1,12 +1,12 @@
 
 class Game
 
-  attr_reader :player_1, :player_2
+  attr_reader :player_1, :player_2, :current_turn
 
   def initialize(player_1, player_2)
     @player_1=Player.new(player_1)
     @player_2=Player.new(player_2)
-    @current_player = @player_1
+    @current_turn = @player_1
   end
 
   def attack(player)
