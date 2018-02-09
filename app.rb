@@ -35,7 +35,7 @@ class Battle < Sinatra::Base
 
   post '/attack-conf' do
     $game.attack($game.switch_turns)
-    erb :attack_confirm
+    # erb :attack_confirm
     redirect '/play'
     # calling $game.switch_turns might not work here because loading the html file *MAYBE* has to be the
     # last action. If this is the case, we can redirect to get '/new-turn' and then, the first thing we do
@@ -46,7 +46,7 @@ class Battle < Sinatra::Base
   #   redirect '/play'
   #   erb :attack_confirm
   # end
-    
+
   run! if app_file == $0
 
 end
