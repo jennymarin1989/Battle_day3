@@ -13,12 +13,11 @@ class Game
     player.reduce_hit_points
   end
 
-
-  # def switch_turns
-  #   if @current_player == @player_1
-  #     @current_player = @player_2
-  #   elsif @current_player == @player_2
-  #     @current_player = @player_1
-  #   end
-  # end
+  def switch_turns
+    if @current_turn == @player_1
+      @current_turn = @player_2
+    elsif @current_turn == @player_2
+      @current_turn = @player_1
+    end
+  end
 end

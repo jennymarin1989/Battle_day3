@@ -23,16 +23,17 @@ class Battle < Sinatra::Base
   get '/play' do
     # @player_1 = session[:session_1]
     # @player_2 = session[:session_2]
-    # como ya tenemos la globar variable $, podemos hacer 
+    # como ya tenemos la globar variable $, podemos hacer
     # referencia a ella directamente en los archivos html (erb)
     # sin tener que pasar por @.... = $....
     erb :play
   end
 
-  post '/attack-conf' do 
+  post '/attack-conf' do
     $game.attack($game.player_2)
+    $game.switch_turns
     erb :attack_confirm
-    # calling $game.switch_turns might not work here because loading the html file *MAYBE* has to be the 
+    # calling $game.switch_turns might not work here because loading the html file *MAYBE* has to be the
     # last action. If this is the case, we can redirect to get '/new-turn' and then, the first thing we do
     # is call $game.switch_turns
   end
